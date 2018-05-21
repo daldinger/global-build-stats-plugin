@@ -3,13 +3,19 @@
 	<parent>
 		<groupId>org.jenkins-ci.plugins</groupId>
 		<artifactId>plugin</artifactId>
-		<version>1.609.1</version>
+		<version>3.12</version>
 	</parent>
 
 	<artifactId>global-build-stats</artifactId>
 	<version>1.6-SNAPSHOT</version>
 	<name>Hudson global-build-stats plugin</name>
 	<packaging>hpi</packaging>
+
+        <properties>
+          <jenkins.version>2.107.2</jenkins.version>
+          <java.level>8</java.level>
+        </properties>
+
 	<url>http://wiki.jenkins-ci.org/display/JENKINS/Global+Build+Stats+Plugin</url>
 	<description>Global build stats plugin will allow to gather and display global build result statistics. It is a useful tool allowing to display global hudson build trend over time.</description>
 	
@@ -42,12 +48,18 @@
 			<groupId>org.jenkins-ci.plugins</groupId>
 			<artifactId>cloudbees-folder</artifactId>
 			<version>4.9</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins.workflow</groupId>
-            <artifactId>workflow-job</artifactId>
-            <version>2.0</version>
-        </dependency>
+		</dependency>
+                <dependency>
+                        <groupId>org.jenkins-ci.plugins.workflow</groupId>
+                        <artifactId>workflow-job</artifactId>
+                        <version>2.0</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-utils</artifactId>
+                        <version>3.1.0</version>
+                        <scope>test</scope>
+                </dependency>
 	</dependencies>
 
 	<repositories>
